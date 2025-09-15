@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    text-align: center;
+    padding: 2rem;
+  }
+  h1 { color: #ff4444; }
+  #log {
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    height: 300px;
+    overflow-y: auto;
+    margin: 1rem auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  input {
+    padding: 0.5rem;
+    width: 300px;
+    border-radius: 6px;
+    border: none;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #ff2222;
+  }
