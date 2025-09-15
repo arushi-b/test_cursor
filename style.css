@@ -472,13 +472,6 @@ h1 {
   color: #ff4444;
 }
 
-/* Crowd messages */
-#log p:has(b:contains("Crowd")) {
-  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
-  border-left: 4px solid #ffd700;
-  color: #ffd700;
-  font-style: italic;
-}
 
 /* Input Area */
 .input-area {

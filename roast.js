@@ -64,23 +64,6 @@ const roastThemes = {
   ]
 };
 
-const crowdReactions = [
-  "OHHHH 🔥🔥🔥",
-  "BOOOOO! 👎",
-  "That was weak…",
-  "Grandma would roast better 😂",
-  "MIC DROP 🎤",
-  "CROWD GOES WILD! 🎉",
-  "BRUTAL! 💀",
-  "EPIC BURN! 🔥",
-  "CROWD IS SILENT... 😶",
-  "STANDING OVATION! 👏",
-  "SAVAGE! 🔥",
-  "DISRESPECT! 😤",
-  "LEGENDARY! 👑",
-  "CROWD IS DEAD! 💀",
-  "UNSTOPPABLE! ⚡"
-];
 
 // DOM Elements
 const landingPage = document.getElementById('landingPage');
@@ -295,10 +278,6 @@ function botTurn() {
   
   // Simulate realistic typing with character-by-character display
   typeMessage(botRoast, "RoastBot 3000", () => {
-    // Crowd reaction
-    const reaction = crowdReactions[Math.floor(Math.random() * crowdReactions.length)];
-    addToLog(reaction, "Crowd");
-    
     // Re-enable input
     setTimeout(() => {
       if (gameActive) {
