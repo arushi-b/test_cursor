@@ -6,15 +6,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🔥 ROAST BATTLE 3000 🔥</h1>
-  <p class="subtitle">⚔️ ENTER THE ARENA ⚔️</p>
-  <p>Type your roast below and press Enter. Type <b>quit</b> to give up!</p>
+  <!-- Landing Page -->
+  <div id="landingPage" class="page active">
+    <div class="landing-content">
+      <h1 class="landing-title">🔥 ROAST BATTLE 3000 🔥</h1>
+      <div class="sassy-welcome">
+        <p class="welcome-text">Oh, look who decided to show up...</p>
+        <p class="welcome-text">Another brave soul ready to get absolutely <span class="highlight">DESTROYED</span>?</p>
+        <p class="welcome-text">Well, well, well... I hope you brought your A-game, because I'm about to serve you a reality check with a side of <span class="highlight">HUMILIATION</span>.</p>
+        <p class="welcome-text">Think you can handle the heat? <span class="highlight">Doubt it.</span></p>
+      </div>
+      <button id="enterArena" class="enter-btn">BRING IT ON! 💀</button>
+    </div>
+  </div>
 
-  <div id="log"></div>
+  <!-- Theme Selection Page -->
+  <div id="themePage" class="page">
+    <div class="theme-content">
+      <h2>Choose Your Battle Arena</h2>
+      <p class="theme-subtitle">Pick your poison... I mean, your preferred style of destruction</p>
+      
+      <div class="theme-grid">
+        <div class="theme-card" data-theme="classic">
+          <div class="theme-icon">🎭</div>
+          <h3>Classic Roasts</h3>
+          <p>Traditional, witty, and absolutely brutal</p>
+        </div>
+        
+        <div class="theme-card" data-theme="savage">
+          <div class="theme-icon">💀</div>
+          <h3>Savage Mode</h3>
+          <p>No mercy, no filter, pure destruction</p>
+        </div>
+        
+        <div class="theme-card" data-theme="intellectual">
+          <div class="theme-icon">🧠</div>
+          <h3>Intellectual Burns</h3>
+          <p>Smart, sophisticated, and devastating</p>
+        </div>
+        
+        <div class="theme-card" data-theme="random">
+          <div class="theme-icon">🎲</div>
+          <h3>Chaos Mode</h3>
+          <p>Completely unpredictable and wild</p>
+        </div>
+      </div>
+      
+      <button id="startBattle" class="start-btn" disabled>SELECT A THEME FIRST</button>
+    </div>
+  </div>
 
-  <div class="input-area">
-    <input id="playerInput" placeholder="Enter your battle cry..." autofocus />
-    <button id="sendBtn">ATTACK!</button>
+  <!-- Battle Arena Page -->
+  <div id="battlePage" class="page">
+    <div class="battle-header">
+      <h2 id="battleTitle">🔥 BATTLE ARENA 🔥</h2>
+      <div class="timer-display">
+        <span id="timerLabel">Time Left:</span>
+        <span id="timer">45</span>
+      </div>
+    </div>
+    
+    <div id="log" class="battle-log"></div>
+    
+    <div class="input-area">
+      <input id="playerInput" placeholder="Enter your battle cry..." disabled />
+      <button id="sendBtn" disabled>ATTACK!</button>
+    </div>
+    
+    <div class="battle-stats">
+      <div class="stat">
+        <span class="stat-label">Your Score:</span>
+        <span id="playerScore">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Bot Score:</span>
+        <span id="botScore">0</span>
+      </div>
+    </div>
   </div>
 
   <script src="roast.js"></script>
