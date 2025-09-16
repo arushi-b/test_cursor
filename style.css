@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
   color: #fff;
   text-align: center;
   padding: 0;
@@ -41,12 +41,12 @@ body {
   font-family: 'Orbitron', monospace;
   font-weight: 900;
   font-size: 4rem;
-  color: #ff4444;
+  color: #00d4ff;
   text-shadow: 
-    0 0 10px #ff4444,
-    0 0 20px #ff4444,
-    0 0 30px #ff4444,
-    2px 2px 0px #8b0000;
+    0 0 10px #00d4ff,
+    0 0 20px #00d4ff,
+    0 0 30px #00d4ff,
+    2px 2px 0px #0066cc;
   margin: 2rem 0;
   letter-spacing: 3px;
   animation: titleGlow 2s ease-in-out infinite alternate;
@@ -81,7 +81,7 @@ body {
 
 .enter-btn {
   padding: 1.5rem 3rem;
-  background: linear-gradient(45deg, #ff4444, #ff6666);
+  background: linear-gradient(45deg, #00d4ff, #0099cc);
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -92,7 +92,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   box-shadow: 
-    0 0 30px rgba(255, 68, 68, 0.4),
+    0 0 30px rgba(0, 212, 255, 0.4),
     0 8px 25px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   margin-top: 2rem;
@@ -101,11 +101,244 @@ body {
 }
 
 .enter-btn:hover {
-  background: linear-gradient(45deg, #ff6666, #ff8888);
+  background: linear-gradient(45deg, #0099cc, #00bfff);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 
-    0 0 40px rgba(255, 68, 68, 0.6),
+    0 0 40px rgba(0, 212, 255, 0.6),
     0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Game Page Styles */
+.game-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.word-display {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 3px solid #00d4ff;
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.current-word {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #00d4ff;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  animation: wordPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes wordPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 2px solid #00d4ff;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.stat-label {
+  color: #ccc;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item span:last-child {
+  color: #00d4ff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Game Arena Styles */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.game-header h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+  margin: 0;
+}
+
+.word-display-arena {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 3px solid #00d4ff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.word-label {
+  font-family: 'Orbitron', monospace;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.current-word-arena {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  font-size: 4rem;
+  color: #00d4ff;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  animation: wordPulse 2s ease-in-out infinite alternate;
+}
+
+.game-stats-arena {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-arena {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 2px solid #00d4ff;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.stat-arena span:last-child {
+  color: #00d4ff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.game-log {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 3px solid #00d4ff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  height: 300px;
+  overflow-y: auto;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 
+    0 0 30px rgba(0, 212, 255, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.game-log::before {
+  content: '🎵 GAME LOG 🎵';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #00d4ff, #ffd700);
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+.game-log p {
+  margin: 0.8rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.game-log p b {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+/* Player messages */
+.game-log p:has(b:contains("You")) {
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
+  border-left: 4px solid #00d4ff;
+  color: #00d4ff;
+}
+
+/* System messages */
+.game-log p:has(b:contains("System")) {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+  border-left: 4px solid #ffd700;
+  color: #ffd700;
+}
+
+.input-group {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-family: 'Orbitron', monospace;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.skip-btn {
+  background: linear-gradient(45deg, #ffaa00, #ffcc00);
+  color: #000;
+}
+
+.skip-btn:hover {
+  background: linear-gradient(45deg, #ffcc00, #ffff00);
+}
+
+.quit-btn {
+  background: linear-gradient(45deg, #ff4444, #ff6666);
+  color: #fff;
+}
+
+.quit-btn:hover {
+  background: linear-gradient(45deg, #ff6666, #ff8888);
 }
 
 /* Theme Selection Styles */
@@ -269,14 +502,14 @@ body {
 
 .timer-display {
   background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 2px solid #ff4444;
+  border: 2px solid #00d4ff;
   border-radius: 15px;
   padding: 1rem 1.5rem;
   font-family: 'Orbitron', monospace;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #ff4444;
-  box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+  color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 #timer {
@@ -477,7 +710,7 @@ body {
   }
 }
 
-/* Stadium Background Effects */
+/* Music Background Effects */
 body::before {
   content: '';
   position: fixed;
@@ -486,14 +719,14 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(255, 68, 68, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
 
-/* Stadium Lights Effect */
+/* Music Lights Effect */
 body::after {
   content: '';
   position: fixed;
@@ -503,13 +736,13 @@ body::after {
   height: 200%;
   background: 
     conic-gradient(from 0deg at 25% 25%, transparent 0deg, rgba(255, 255, 255, 0.02) 45deg, transparent 90deg),
-    conic-gradient(from 180deg at 75% 75%, transparent 0deg, rgba(255, 68, 68, 0.02) 45deg, transparent 90deg);
-  animation: stadiumLights 20s linear infinite;
+    conic-gradient(from 180deg at 75% 75%, transparent 0deg, rgba(0, 212, 255, 0.02) 45deg, transparent 90deg);
+  animation: musicLights 20s linear infinite;
   pointer-events: none;
   z-index: -1;
 }
 
-@keyframes stadiumLights {
+@keyframes musicLights {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
@@ -591,18 +824,33 @@ h1 {
 @keyframes titleGlow {
   0% { 
     text-shadow: 
-      0 0 10px #ff4444,
-      0 0 20px #ff4444,
-      0 0 30px #ff4444,
-      2px 2px 0px #8b0000;
+      0 0 10px #00d4ff,
+      0 0 20px #00d4ff,
+      0 0 30px #00d4ff,
+      2px 2px 0px #0066cc;
   }
   100% { 
     text-shadow: 
-      0 0 15px #ff4444,
-      0 0 25px #ff4444,
-      0 0 35px #ff4444,
-      0 0 45px #ff4444,
-      2px 2px 0px #8b0000;
+      0 0 15px #00d4ff,
+      0 0 25px #00d4ff,
+      0 0 35px #00d4ff,
+      0 0 45px #00d4ff,
+      2px 2px 0px #0066cc;
+  }
+}
+
+@keyframes successEffect {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
   }
 }
 
@@ -691,7 +939,7 @@ input {
   padding: 1rem 1.5rem;
   width: 400px;
   max-width: 90vw;
-  border: 2px solid #ff4444;
+  border: 2px solid #00d4ff;
   border-radius: 25px;
   background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
   color: #fff;
@@ -700,7 +948,7 @@ input {
   font-weight: 600;
   text-align: center;
   box-shadow: 
-    0 0 20px rgba(255, 68, 68, 0.3),
+    0 0 20px rgba(0, 212, 255, 0.3),
     inset 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
@@ -721,7 +969,7 @@ input::placeholder {
 
 button {
   padding: 1rem 2rem;
-  background: linear-gradient(45deg, #ff4444, #ff6666);
+  background: linear-gradient(45deg, #00d4ff, #0099cc);
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -732,7 +980,7 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   box-shadow: 
-    0 0 20px rgba(255, 68, 68, 0.4),
+    0 0 20px rgba(0, 212, 255, 0.4),
     0 5px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   position: relative;
@@ -751,10 +999,10 @@ button::before {
 }
 
 button:hover {
-  background: linear-gradient(45deg, #ff6666, #ff8888);
+  background: linear-gradient(45deg, #0099cc, #00bfff);
   transform: translateY(-2px);
   box-shadow: 
-    0 0 30px rgba(255, 68, 68, 0.6),
+    0 0 30px rgba(0, 212, 255, 0.6),
     0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -765,27 +1013,27 @@ button:hover::before {
 button:active {
   transform: translateY(0);
   box-shadow: 
-    0 0 15px rgba(255, 68, 68, 0.4),
+    0 0 15px rgba(0, 212, 255, 0.4),
     0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Scrollbar Styling */
-.battle-log::-webkit-scrollbar {
+.game-log::-webkit-scrollbar {
   width: 8px;
 }
 
-.battle-log::-webkit-scrollbar-track {
+.game-log::-webkit-scrollbar-track {
   background: #1a1a1a;
   border-radius: 4px;
 }
 
-.battle-log::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff4444, #ffd700);
+.game-log::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00d4ff, #ffd700);
   border-radius: 4px;
 }
 
-.battle-log::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ff6666, #ffff00);
+.game-log::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #00bfff, #ffff00);
 }
 
 /* Responsive Design */
