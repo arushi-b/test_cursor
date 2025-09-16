@@ -23,64 +23,127 @@
   <!-- Theme Selection Page -->
   <div id="themePage" class="page">
     <div class="theme-content">
-      <h2>Choose Your Battle Arena</h2>
-      <p class="theme-subtitle">Pick your poison... I mean, your preferred style of destruction</p>
+      <h2>Choose Your Roast Warrior</h2>
+      <p class="theme-subtitle">Select your battle class and prepare for the ultimate roast showdown!</p>
       
       <div class="theme-grid">
-        <div class="theme-card" data-theme="classic">
-          <div class="theme-icon">🎭</div>
-          <h3>Classic Roasts</h3>
-          <p>Traditional, witty, and absolutely brutal</p>
+        <div class="theme-card" data-theme="firelord">
+          <div class="theme-icon">🔥</div>
+          <h3>Fire Lord</h3>
+          <p><strong>Special Ability:</strong> Inferno Blast - Deals 2x damage for 3 turns</p>
+          <p><strong>Style:</strong> Savage, brutal, no-holds-barred destruction</p>
+          <div class="power-bar">
+            <div class="power-fill fire-power"></div>
+          </div>
         </div>
         
-        <div class="theme-card" data-theme="savage">
-          <div class="theme-icon">💀</div>
-          <h3>Savage Mode</h3>
-          <p>No mercy, no filter, pure destruction</p>
-        </div>
-        
-        <div class="theme-card" data-theme="intellectual">
+        <div class="theme-card" data-theme="mindbender">
           <div class="theme-icon">🧠</div>
-          <h3>Intellectual Burns</h3>
-          <p>Smart, sophisticated, and devastating</p>
+          <h3>Mind Bender</h3>
+          <p><strong>Special Ability:</strong> Time Freeze - Stops opponent's timer for 10 seconds</p>
+          <p><strong>Style:</strong> Intellectual, sophisticated, psychological warfare</p>
+          <div class="power-bar">
+            <div class="power-fill mind-power"></div>
+          </div>
         </div>
         
-        <div class="theme-card" data-theme="random">
-          <div class="theme-icon">🎲</div>
-          <h3>Chaos Mode</h3>
-          <p>Completely unpredictable and wild</p>
+        <div class="theme-card" data-theme="shadowmaster">
+          <div class="theme-icon">👤</div>
+          <h3>Shadow Master</h3>
+          <p><strong>Special Ability:</strong> Mirror Shield - Reflects next attack back at opponent</p>
+          <p><strong>Style:</strong> Stealthy, cunning, unpredictable chaos</p>
+          <div class="power-bar">
+            <div class="power-fill shadow-power"></div>
+          </div>
+        </div>
+        
+        <div class="theme-card" data-theme="thunderking">
+          <div class="theme-icon">⚡</div>
+          <h3>Thunder King</h3>
+          <p><strong>Special Ability:</strong> Chain Lightning - Combo attacks deal exponential damage</p>
+          <p><strong>Style:</strong> Classic, witty, devastating one-liners</p>
+          <div class="power-bar">
+            <div class="power-fill thunder-power"></div>
+          </div>
         </div>
       </div>
       
-      <button id="startBattle" class="start-btn" disabled>SELECT A THEME FIRST</button>
+      <button id="startBattle" class="start-btn" disabled>SELECT YOUR WARRIOR</button>
     </div>
   </div>
 
   <!-- Battle Arena Page -->
   <div id="battlePage" class="page">
     <div class="battle-header">
-      <h2 id="battleTitle">🔥 BATTLE ARENA 🔥</h2>
+      <h2 id="battleTitle">⚔️ ROAST BATTLE ROYALE ⚔️</h2>
       <div class="timer-display">
         <span id="timerLabel">Time Left:</span>
-        <span id="timer">45</span>
+        <span id="timer">30</span>
+      </div>
+    </div>
+    
+    <!-- Health Bars -->
+    <div class="health-bars">
+      <div class="player-health">
+        <div class="health-label">YOU</div>
+        <div class="health-bar">
+          <div id="playerHealth" class="health-fill player-fill"></div>
+          <span id="playerHealthText" class="health-text">100/100</span>
+        </div>
+      </div>
+      <div class="vs-indicator">VS</div>
+      <div class="bot-health">
+        <div class="health-label">ROASTBOT 3000</div>
+        <div class="health-bar">
+          <div id="botHealth" class="health-fill bot-fill"></div>
+          <span id="botHealthText" class="health-text">100/100</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Power-ups and Abilities -->
+    <div class="power-ups">
+      <div class="power-up" id="shieldPower" data-power="shield">
+        <div class="power-icon">🛡️</div>
+        <div class="power-name">Shield</div>
+        <div class="power-cooldown">Ready</div>
+      </div>
+      <div class="power-up" id="damagePower" data-power="damage">
+        <div class="power-icon">💥</div>
+        <div class="power-name">Double Damage</div>
+        <div class="power-cooldown">Ready</div>
+      </div>
+      <div class="power-up" id="timePower" data-power="time">
+        <div class="power-icon">⏰</div>
+        <div class="power-name">Time Freeze</div>
+        <div class="power-cooldown">Ready</div>
+      </div>
+      <div class="power-up" id="comboPower" data-power="combo">
+        <div class="power-icon">⚡</div>
+        <div class="power-name">Combo Boost</div>
+        <div class="power-cooldown">Ready</div>
       </div>
     </div>
     
     <div id="log" class="battle-log"></div>
     
     <div class="input-area">
-      <input id="playerInput" placeholder="Enter your battle cry..." disabled />
-      <button id="sendBtn" disabled>ATTACK!</button>
+      <input id="playerInput" placeholder="Enter your devastating roast..." disabled />
+      <button id="sendBtn" disabled>LAUNCH ATTACK!</button>
     </div>
     
     <div class="battle-stats">
       <div class="stat">
-        <span class="stat-label">Your Score:</span>
-        <span id="playerScore">0</span>
+        <span class="stat-label">Combo:</span>
+        <span id="comboCount">0x</span>
       </div>
       <div class="stat">
-        <span class="stat-label">Bot Score:</span>
-        <span id="botScore">0</span>
+        <span class="stat-label">Damage Dealt:</span>
+        <span id="damageDealt">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Special Ready:</span>
+        <span id="specialReady">⚡</span>
       </div>
     </div>
   </div>
