@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nunito:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
-  color: #fff;
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(135deg, #ffeef8 0%, #f0f8ff 50%, #f5f0ff 100%);
+  color: #5a5a5a;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -38,18 +38,14 @@ body {
 }
 
 .landing-title {
-  font-family: 'Orbitron', monospace;
-  font-weight: 900;
-  font-size: 4rem;
-  color: #00d4ff;
-  text-shadow: 
-    0 0 10px #00d4ff,
-    0 0 20px #00d4ff,
-    0 0 30px #00d4ff,
-    2px 2px 0px #0066cc;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #ff6b9d;
+  text-shadow: 2px 2px 0px #ffb3d1;
   margin: 2rem 0;
-  letter-spacing: 3px;
-  animation: titleGlow 2s ease-in-out infinite alternate;
+  letter-spacing: 1px;
+  animation: titleBounce 2s ease-in-out infinite alternate;
 }
 
 .sassy-welcome {
@@ -61,11 +57,12 @@ body {
 }
 
 .welcome-text {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 1.2rem 0;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
+  color: #6b6b6b;
 }
 
 .welcome-text:nth-child(1) { animation-delay: 0.5s; }
@@ -74,26 +71,28 @@ body {
 .welcome-text:nth-child(4) { animation-delay: 2s; }
 
 .highlight {
-  color: #ffd700;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  color: #ff6b9d;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ffb3d1, #ffd1e3);
+  padding: 2px 6px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .enter-btn {
-  padding: 1.5rem 3rem;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(45deg, #ff6b9d, #ff8fab);
   color: #fff;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
   box-shadow: 
-    0 0 30px rgba(0, 212, 255, 0.4),
-    0 8px 25px rgba(0, 0, 0, 0.3);
+    0 4px 15px rgba(255, 107, 157, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   margin-top: 2rem;
   opacity: 0;
@@ -101,11 +100,11 @@ body {
 }
 
 .enter-btn:hover {
-  background: linear-gradient(45deg, #0099cc, #00bfff);
-  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(45deg, #ff8fab, #ffa8c5);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 
-    0 0 40px rgba(0, 212, 255, 0.6),
-    0 12px 35px rgba(0, 0, 0, 0.4);
+    0 6px 20px rgba(255, 107, 157, 0.4),
+    0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Game Page Styles */
@@ -116,26 +115,31 @@ body {
 }
 
 .word-display {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 3px solid #00d4ff;
-  border-radius: 20px;
-  padding: 3rem;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border: 3px solid #ffb3d1;
+  border-radius: 25px;
+  padding: 2.5rem;
   margin: 2rem 0;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 179, 209, 0.2);
 }
 
 .current-word {
-  font-family: 'Orbitron', monospace;
-  font-weight: 900;
-  font-size: 3rem;
-  color: #00d4ff;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
-  animation: wordPulse 2s ease-in-out infinite alternate;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #ff6b9d;
+  text-shadow: 2px 2px 0px #ffb3d1;
+  animation: wordBounce 2s ease-in-out infinite alternate;
 }
 
-@keyframes wordPulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
+@keyframes wordBounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-5px); }
+}
+
+@keyframes titleBounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-3px); }
 }
 
 .game-stats {
@@ -147,27 +151,27 @@ body {
 }
 
 .stat-item {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 2px solid #00d4ff;
-  border-radius: 15px;
-  padding: 1.5rem 2rem;
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border: 2px solid #ffb3d1;
+  border-radius: 20px;
+  padding: 1.2rem 1.8rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 179, 209, 0.15);
 }
 
 .stat-label {
-  color: #ccc;
+  color: #8a8a8a;
   font-size: 0.9rem;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .stat-item span:last-child {
-  color: #00d4ff;
-  font-size: 2rem;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  color: #ff6b9d;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 /* Game Arena Styles */
@@ -181,39 +185,38 @@ body {
 }
 
 .game-header h2 {
-  font-family: 'Orbitron', monospace;
-  font-size: 2rem;
-  color: #00d4ff;
-  text-shadow: 0 0 10px #00d4ff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  color: #ff6b9d;
+  text-shadow: 1px 1px 0px #ffb3d1;
   margin: 0;
 }
 
 .word-display-arena {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 3px solid #00d4ff;
-  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border: 3px solid #ffb3d1;
+  border-radius: 25px;
   padding: 2rem;
   margin: 2rem 0;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 179, 209, 0.2);
 }
 
 .word-label {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
-  color: #ffd700;
+  font-size: 1.1rem;
+  color: #8a8a8a;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .current-word-arena {
-  font-family: 'Orbitron', monospace;
-  font-weight: 900;
-  font-size: 4rem;
-  color: #00d4ff;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
-  animation: wordPulse 2s ease-in-out infinite alternate;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #ff6b9d;
+  text-shadow: 2px 2px 0px #ffb3d1;
+  animation: wordBounce 2s ease-in-out infinite alternate;
 }
 
 .game-stats-arena {
@@ -242,9 +245,9 @@ body {
 }
 
 .game-log {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 3px solid #00d4ff;
-  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border: 3px solid #ffb3d1;
+  border-radius: 20px;
   padding: 1.5rem;
   height: 300px;
   overflow-y: auto;
@@ -252,26 +255,26 @@ body {
   max-width: 800px;
   text-align: left;
   box-shadow: 
-    0 0 30px rgba(0, 212, 255, 0.3),
-    inset 0 0 20px rgba(0, 0, 0, 0.5);
+    0 8px 25px rgba(255, 179, 209, 0.2),
+    inset 0 2px 5px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
 .game-log::before {
-  content: '🎵 GAME LOG 🎵';
+  content: '🌸 GAME LOG 🌸';
   position: absolute;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, #00d4ff, #ffd700);
-  color: #000;
+  background: linear-gradient(45deg, #ff6b9d, #ffb3d1);
+  color: #fff;
   padding: 5px 20px;
   border-radius: 20px;
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   font-size: 0.9rem;
-  letter-spacing: 2px;
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
 }
 
 .game-log p {
@@ -283,22 +286,22 @@ body {
 }
 
 .game-log p b {
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
 
 /* Player messages */
 .game-log p:has(b:contains("You")) {
-  background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
-  border-left: 4px solid #00d4ff;
-  color: #00d4ff;
+  background: linear-gradient(90deg, rgba(255, 107, 157, 0.1), transparent);
+  border-left: 4px solid #ff6b9d;
+  color: #ff6b9d;
 }
 
 /* System messages */
 .game-log p:has(b:contains("System")) {
-  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
-  border-left: 4px solid #ffd700;
-  color: #ffd700;
+  background: linear-gradient(90deg, rgba(255, 179, 209, 0.1), transparent);
+  border-left: 4px solid #ffb3d1;
+  color: #8a8a8a;
 }
 
 .input-group {
@@ -308,11 +311,10 @@ body {
 
 .input-group label {
   display: block;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
-  color: #00d4ff;
+  color: #ff6b9d;
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
 }
 
 .game-controls {
@@ -324,21 +326,21 @@ body {
 }
 
 .skip-btn {
-  background: linear-gradient(45deg, #ffaa00, #ffcc00);
-  color: #000;
+  background: linear-gradient(45deg, #ffb347, #ffcc5c);
+  color: #fff;
 }
 
 .skip-btn:hover {
-  background: linear-gradient(45deg, #ffcc00, #ffff00);
+  background: linear-gradient(45deg, #ffcc5c, #ffd93d);
 }
 
 .quit-btn {
-  background: linear-gradient(45deg, #ff4444, #ff6666);
+  background: linear-gradient(45deg, #ff8a80, #ffab91);
   color: #fff;
 }
 
 .quit-btn:hover {
-  background: linear-gradient(45deg, #ff6666, #ff8888);
+  background: linear-gradient(45deg, #ffab91, #ffccbc);
 }
 
 /* Theme Selection Styles */
@@ -501,21 +503,21 @@ body {
 }
 
 .timer-display {
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  border: 2px solid #00d4ff;
-  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  border: 2px solid #ffb3d1;
+  border-radius: 20px;
   padding: 1rem 1.5rem;
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #00d4ff;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ff6b9d;
+  box-shadow: 0 4px 15px rgba(255, 179, 209, 0.2);
 }
 
 #timer {
-  font-size: 1.5rem;
-  color: #ffd700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  font-size: 1.4rem;
+  color: #ff6b9d;
+  font-weight: 700;
 }
 
 /* Health Bars */
@@ -710,7 +712,7 @@ body {
   }
 }
 
-/* Music Background Effects */
+/* Cute Background Effects */
 body::before {
   content: '';
   position: fixed;
@@ -719,14 +721,14 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 179, 209, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 183, 197, 0.03) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
 
-/* Music Lights Effect */
+/* Cute Sparkle Effect */
 body::after {
   content: '';
   position: fixed;
@@ -735,14 +737,14 @@ body::after {
   width: 200%;
   height: 200%;
   background: 
-    conic-gradient(from 0deg at 25% 25%, transparent 0deg, rgba(255, 255, 255, 0.02) 45deg, transparent 90deg),
-    conic-gradient(from 180deg at 75% 75%, transparent 0deg, rgba(0, 212, 255, 0.02) 45deg, transparent 90deg);
-  animation: musicLights 20s linear infinite;
+    conic-gradient(from 0deg at 25% 25%, transparent 0deg, rgba(255, 255, 255, 0.01) 45deg, transparent 90deg),
+    conic-gradient(from 180deg at 75% 75%, transparent 0deg, rgba(255, 107, 157, 0.01) 45deg, transparent 90deg);
+  animation: sparkleLights 30s linear infinite;
   pointer-events: none;
   z-index: -1;
 }
 
-@keyframes musicLights {
+@keyframes sparkleLights {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
@@ -939,49 +941,48 @@ input {
   padding: 1rem 1.5rem;
   width: 400px;
   max-width: 90vw;
-  border: 2px solid #00d4ff;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-  color: #fff;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border: 2px solid #ffb3d1;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  color: #5a5a5a;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: center;
   box-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.3),
-    inset 0 0 10px rgba(0, 0, 0, 0.3);
+    0 4px 15px rgba(255, 179, 209, 0.15),
+    inset 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 input:focus {
   outline: none;
-  border-color: #ffd700;
+  border-color: #ff6b9d;
   box-shadow: 
-    0 0 30px rgba(255, 215, 0, 0.5),
-    inset 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: scale(1.02);
+    0 6px 20px rgba(255, 107, 157, 0.25),
+    inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(1.01);
 }
 
 input::placeholder {
-  color: #888;
+  color: #b8b8b8;
   font-style: italic;
 }
 
 button {
   padding: 1rem 2rem;
-  background: linear-gradient(45deg, #00d4ff, #0099cc);
+  background: linear-gradient(45deg, #ff6b9d, #ff8fab);
   color: #fff;
   border: none;
-  border-radius: 25px;
+  border-radius: 20px;
   cursor: pointer;
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   box-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.4),
-    0 5px 15px rgba(0, 0, 0, 0.3);
+    0 4px 15px rgba(255, 107, 157, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -999,11 +1000,11 @@ button::before {
 }
 
 button:hover {
-  background: linear-gradient(45deg, #0099cc, #00bfff);
+  background: linear-gradient(45deg, #ff8fab, #ffa8c5);
   transform: translateY(-2px);
   box-shadow: 
-    0 0 30px rgba(0, 212, 255, 0.6),
-    0 8px 25px rgba(0, 0, 0, 0.4);
+    0 6px 20px rgba(255, 107, 157, 0.4),
+    0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 button:hover::before {
@@ -1013,8 +1014,8 @@ button:hover::before {
 button:active {
   transform: translateY(0);
   box-shadow: 
-    0 0 15px rgba(0, 212, 255, 0.4),
-    0 3px 10px rgba(0, 0, 0, 0.3);
+    0 2px 8px rgba(255, 107, 157, 0.3),
+    0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Scrollbar Styling */
@@ -1023,17 +1024,17 @@ button:active {
 }
 
 .game-log::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #f8f9ff;
   border-radius: 4px;
 }
 
 .game-log::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00d4ff, #ffd700);
+  background: linear-gradient(45deg, #ff6b9d, #ffb3d1);
   border-radius: 4px;
 }
 
 .game-log::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #00bfff, #ffff00);
+  background: linear-gradient(45deg, #ff8fab, #ffc1d6);
 }
 
 /* Responsive Design */

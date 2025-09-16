@@ -82,8 +82,8 @@ function startGame() {
   
   // Clear log and add welcome message
   gameLog.innerHTML = '';
-  addToLog("Welcome to the Song Lyric Challenge! 🎵", "System");
-  addToLog("You have 30 seconds for each word. Good luck! 🍀", "System");
+  addToLog("Welcome to the Song Lyric Challenge! 🌸", "System");
+  addToLog("You have 30 seconds for each word. Good luck! 🌸", "System");
   
   // Update stats
   updateStats();
@@ -121,7 +121,7 @@ function startNewRound() {
   // Start timer
   startTimer();
   
-  addToLog(`Round ${round}: Find a song with the word "${currentWord}"! 🎤`, "System");
+  addToLog(`Round ${round}: Find a song with the word "${currentWord}"! 🌸`, "System");
 }
 
 function getNewWord() {
@@ -203,7 +203,7 @@ function submitAnswer() {
   streak++;
   
   addToLog(`✅ CORRECT! "${title}" - "${lyric}"`, "You");
-  addToLog(`🎉 +${points} points! Streak: ${streak}x`, "System");
+  addToLog(`🌸 +${points} points! Streak: ${streak}x`, "System");
   
   // Update stats
   updateStats();
@@ -253,7 +253,7 @@ function quitGame() {
   gameActive = false;
   clearInterval(timerInterval);
   
-  addToLog("🚪 Game ended by player choice", "System");
+  addToLog("🌸 Game ended by player choice", "System");
   
   setTimeout(() => {
     endGame();
@@ -298,11 +298,11 @@ function createSuccessEffect() {
   effect.style.left = "50%";
   effect.style.transform = "translate(-50%, -50%)";
   effect.style.fontSize = "4rem";
-  effect.style.color = "#00ff00";
+  effect.style.color = "#ff6b9d";
   effect.style.pointerEvents = "none";
   effect.style.zIndex = "1000";
   effect.style.animation = "successEffect 1s ease-out forwards";
-  effect.innerHTML = "🎉";
+  effect.innerHTML = "🌸";
   
   document.body.appendChild(effect);
   
@@ -327,7 +327,7 @@ function endGame() {
   skipBtn.disabled = true;
   
   // Show final stats
-  addToLog("🎵 GAME OVER! 🎵", "System");
+  addToLog("🌸 GAME OVER! 🌸", "System");
   addToLog(`Final Score: ${score} points`, "System");
   addToLog(`Rounds Completed: ${round - 1}`, "System");
   addToLog(`Best Streak: ${streak}x`, "System");
@@ -335,13 +335,13 @@ function endGame() {
   // Show performance message
   setTimeout(() => {
     if (score >= 50) {
-      addToLog("🏆 AMAZING! You're a true music expert! 🏆", "System");
+      addToLog("🌸 AMAZING! You're a true music expert! 🌸", "System");
     } else if (score >= 30) {
-      addToLog("🎤 GREAT JOB! You know your music! 🎤", "System");
+      addToLog("🌸 GREAT JOB! You know your music! 🌸", "System");
     } else if (score >= 15) {
-      addToLog("🎵 GOOD EFFORT! Keep practicing! 🎵", "System");
+      addToLog("🌸 GOOD EFFORT! Keep practicing! 🌸", "System");
     } else {
-      addToLog("🎶 NICE TRY! Better luck next time! 🎶", "System");
+      addToLog("🌸 NICE TRY! Better luck next time! 🌸", "System");
     }
     
     addToLog("Click 'Quit Game' to return to main menu", "System");
